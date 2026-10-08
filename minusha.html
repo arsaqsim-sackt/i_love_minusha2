@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для Минушеньки</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600&display=swap">
+<style>
+:root{
+  --night:#1b1426; --dusk:#2a1f3a; --lav:#cdbfe8; --rose:#eaa7ba; --amber:#f4dba8; --text:#efe9f7; --soft:#b9aed0;
+  --serif:"Lora",Georgia,"Times New Roman",serif; --sans:"Nunito","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:
+    radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent 51%),
+    radial-gradient(1px 1px at 72% 12%,#fff7 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 88% 40%,#fff6 50%,transparent 51%),
+    radial-gradient(1px 1px at 30% 70%,#fff6 50%,transparent 51%),
+    radial-gradient(1px 1px at 60% 85%,#fff7 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 6% 90%,#fff6 50%,transparent 51%),
+    radial-gradient(ellipse at 80% -10%,#4a3563 0%,transparent 55%),
+    var(--night);
+  color:var(--text); font-family:var(--serif); line-height:1.75; font-size:1.1rem;
+}
+main{max-width:34rem;margin:0 auto;min-height:100%;display:flex;flex-direction:column;padding:1.5rem 1.25rem 2rem}
+.stage{display:none;flex:1;flex-direction:column;justify-content:center;padding:2rem 0}
+.stage.on{display:flex;animation:in .7s ease both}
+@keyframes in{from{opacity:0}to{opacity:1}}
+h1{font-weight:600;font-size:clamp(2.4rem,9vw,3.4rem);line-height:1.1;margin:0 0 1rem;color:var(--amber);letter-spacing:.01em}
+h2{font-weight:600;font-size:1.65rem;line-height:1.25;margin:0 0 1.2rem;color:var(--rose)}
+p{margin:0 0 1.1rem}
+em{color:var(--lav)}
+.small{font-family:var(--sans);font-size:.95rem;color:var(--soft)}
+.names{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.6rem;font-family:var(--sans)}
+.names span{border:1px solid #cdbfe855;border-radius:2rem;padding:.25rem .85rem;color:var(--lav);font-size:.95rem;animation:float 5s ease-in-out infinite}
+.names span:nth-child(2n){animation-delay:-1.5s}.names span:nth-child(3n){animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-4px)}}
+blockquote{margin:1.2rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--rose);color:var(--amber);font-style:italic}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;font-family:var(--sans)}
+button{font:inherit;cursor:pointer;border-radius:2rem;border:1px solid #cdbfe877;background:transparent;color:var(--text);padding:.65rem 1.3rem}
+button:hover{background:#cdbfe820}
+button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+button.go{background:var(--rose);color:#2a1630;border-color:var(--rose);font-weight:600}
+button.go:hover{background:#f3b9c9}
+button[hidden]{visibility:hidden;display:inline-block}
+.dots{display:flex;gap:.45rem}
+.dots i{width:.55rem;height:.55rem;border-radius:50%;background:#cdbfe833}
+.dots i.on{background:var(--rose)}
+.dots i.done{background:var(--lav)}
+.choices{display:flex;flex-direction:column;gap:.7rem;margin:1.2rem 0;font-family:var(--sans)}
+.choices button{text-align:left;border-radius:1rem}
+#answer{min-height:6rem;margin-top:.5rem;color:var(--amber)}
+@media (prefers-reduced-motion:reduce){.stage.on,.names span{animation:none}}
+</style>
+</head>
+<body>
+<main>
+
+<section class="stage on" aria-label="Начало">
+  <p class="small">Это письмо только для одного человека.</p>
+  <h1>Минушенька</h1>
+  <div class="names" aria-label="Ласковые имена">
+    <span>Кошечка</span><span>Минушенок</span><span>Писюшка</span><span>Масяся</span><span>Принцесса</span><span>Сюсюшка</span>
+  </div>
+  <p>Я сделал это, чтобы сказать то, что не получается сказать нормально в сообщениях.</p>
+  <p>Здесь нет ничего, что нужно срочно прочитать, ответить или решить. Можно листать по одному шагу, можно остановиться и вернуться позже. Можно вообще закрыть, и это будет нормально.</p>
+</section>
+
+<section class="stage" aria-label="Моя вина">
+  <h2>Я виноват</h2>
+  <p>Я перед тобой сильно провинился. Я был кретином, и это не фигура речи.</p>
+  <p>Ты имела полное право злиться, уставать и уйти в себя. Я не буду объяснять, почему «так вышло», и не буду просить, чтобы ты уже простила. Прощение не выдают по расписанию.</p>
+  <blockquote>Мне не нужно, чтобы ты забыла. Мне нужно, чтобы ты знала: я понимаю, что я сделал.</blockquote>
+</section>
+
+<section class="stage" aria-label="Твоё время">
+  <h2>Твоё время — это твоё</h2>
+  <p>Я вижу, что ты устаёшь и что сейчас ты уделяешь время себе. Это правильно. Ты не должна мне ничего объяснять и не должна ради меня делать больше, чем можешь.</p>
+  <p>Я не хочу, чтобы ты что-то делала ради меня. Я не хочу быть тем, кто сидит на шее и тянет из тебя силы. Всё, что между нами, должно быть для нас обоих, а не за твой счёт.</p>
+  <p>Я знаю, как много ты убираешься и как на тебя бывает кричит мама. Мне больно за тебя от этого. Я ни в чём тебя не виню, в том числе в том, что ты теперь бережёшь себя. Вся вина на мне.</p>
+</section>
+
+<section class="stage" aria-label="Как мне сейчас">
+  <h2>Как мне сейчас на самом деле</h2>
+  <p>Я не хочу снова писать «всё хорошо». Это неправда.</p>
+  <p>Мне без тебя невероятно тяжело. Я скучаю. Последние недели я почти не играю и ничем особо не занят. Большую часть времени я просто лежу и думаю о тебе. У меня весь месяц больницы, я сильно устал, и на фоне всего этого во мне поселилась тихая, фоновая депрессия.</p>
+  <p>Бывало, что после наших разговоров я ночами плакал и не находил себе места.</p>
+  <p>Ты, наверное, об этом не знала. Я говорю это не для того, чтобы ты чувствовала вину и не чтобы ты меня спасала. Это моё состояние, и разбираться с ним — моя работа, а не твоя. Я просто больше не хочу ничего от тебя прятать.</p>
+</section>
+
+<section class="stage" aria-label="Что я не буду делать">
+  <h2>Чего я не буду делать</h2>
+  <p>Я не буду давить, караулить твои ответы и требовать «давай поговорим прямо сейчас».</p>
+  <p>Я не буду делать вид, что всё в порядке, и не буду делать вид, что мне всё равно.</p>
+  <p>И самое трудное. Я не могу просто стоять и смотреть, как всё рушится, но и тянуть тебя назад не стану. Если тебе станет легче без меня, скажи об этом. Мне будет больно, но так честнее и лучше для тебя, чем если ты будешь оставаться из жалости.</p>
+</section>
+
+<section class="stage" aria-label="Что я делаю с собой">
+  <h2>Что я делаю со своей стороны</h2>
+  <p>Я отложил в сторону все свои «хотелки». Игры, планы, всё, что было «для меня». Они подождут, пока ты сама не поймёшь, чего хочешь.</p>
+  <p>И ещё одно. Я не оставлю всё как есть с этой тяжестью внутри. Я скажу врачам не только про то, что болит, но и про то, как мне. Чтобы со мной стало лучше, кем бы мы ни были друг для друга.</p>
+</section>
+
+<section class="stage" aria-label="Тебе слово">
+  <h2>Тебе ничего не нужно отвечать</h2>
+  <p>Но если хочется, выбери то, что ближе сейчас. Это никуда не отправляется. Это просто для тебя.</p>
+  <div class="choices">
+    <button data-a="t">Мне нужно время</button>
+    <button data-a="s">Я бы хотела поговорить, но не сегодня</button>
+    <button data-a="o">Мне нужно что-то другое</button>
+  </div>
+  <p id="answer" aria-live="polite"></p>
+  <p>Больше всего я хочу, чтобы ты снова по-настоящему улыбалась и не пряталась. Мне очень не хватает твоей ласки, но сейчас важнее, чтобы тебе было хорошо.</p>
+  <p class="small">Люблю тебя, моя Кошечка. Что бы ты ни решила, я хочу, чтобы тебе было хорошо.</p>
+</section>
+
+<nav>
+  <button id="back" hidden>Назад</button>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button id="next" class="go">Дальше</button>
+</nav>
+</main>
+
+<script>
+const stages=[...document.querySelectorAll('.stage')];
+const dots=document.getElementById('dots'), back=document.getElementById('back'), next=document.getElementById('next');
+stages.forEach(()=>dots.appendChild(document.createElement('i')));
+let i=0;
+function show(n){
+  i=Math.max(0,Math.min(stages.length-1,n));
+  stages.forEach((s,k)=>s.classList.toggle('on',k===i));
+  [...dots.children].forEach((d,k)=>{d.className=k===i?'on':k<i?'done':''});
+  back.hidden=i===0;
+  next.hidden=i===stages.length-1;
+  window.scrollTo({top:0});
+}
+back.onclick=()=>show(i-1);
+next.onclick=()=>show(i+1);
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight')show(i+1);
+  if(e.key==='ArrowLeft')show(i-1);
+});
+const replies={
+  t:"Хорошо. Бери столько времени, сколько нужно. Я никуда не тороплю.",
+  s:"Хорошо. Когда будешь готова, скажи. Я услышу, как скажешь.",
+  o:"Тогда скажи своими словами, как сама захочешь. Я прочитаю внимательно."
+};
+document.querySelectorAll('.choices button').forEach(b=>b.onclick=()=>{
+  document.getElementById('answer').textContent=replies[b.dataset.a];
+});
+show(0);
+</script>
+</body>
+</html>
